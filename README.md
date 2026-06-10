@@ -1,5 +1,7 @@
 # Noctalia Shell 拼音搜索补丁
 
+<https://github.com/SafetyFA/noctalia-pinyin-search>
+
 为 Noctalia Shell (Quickshell 版) 启动器添加拼音全拼和首字母搜索支持。
 
 ## 功能
@@ -12,22 +14,15 @@
 ## 安装
 
 ```bash
+git clone https://github.com/SafetyFA/noctalia-pinyin-search.git
+cd noctalia-pinyin-search
 sudo cp PinyinHelper.js /etc/xdg/quickshell/noctalia-shell/Helpers/
 sudo cp qml/ApplicationsProvider.qml /etc/xdg/quickshell/noctalia-shell/Modules/Panels/Launcher/Providers/
-```
-
-重启 quickshell：
-
-```bash
 pkill -f "qs -c noctalia"
 nohup qs -c noctalia-shell > /dev/null 2>&1 &
 ```
 
-如果遇到 QML 缓存问题：
-
-```bash
-rm -rf ~/.cache/noctalia-qs/qmlcache
-```
+> 如果遇到 QML 缓存问题：`rm -rf ~/.cache/noctalia-qs/qmlcache`
 
 ## 修改的文件
 
